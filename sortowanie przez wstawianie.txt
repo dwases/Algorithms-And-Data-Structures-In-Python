@@ -1,0 +1,26 @@
+# sortowanie przez wstawianie
+def sortowanie(tab):
+    sor_tab = []
+    sor_tab.append(tab.pop())
+    #print(sor_tab)     #krok 1 dziala
+    #print(tab)         #krok 1 dziala
+    for el in tab:
+        print(sor_tab)
+        for i in range(len(sor_tab)):
+            if el <= sor_tab[i]:
+                sor_tab.insert(i, el)
+                break
+            if i == (len(sor_tab)-1):
+                sor_tab.append(el)
+        print('el=',el)
+#        tab.remove(el)
+    return sor_tab
+
+tablica = input().split()
+for i in range(len(tablica)):
+    tablica[i] = int(tablica[i])
+#for i in tablica:
+#    print(i)
+#dziala, sa inty
+tablica = sortowanie(tablica)
+print("posortowana tablica:", tablica)

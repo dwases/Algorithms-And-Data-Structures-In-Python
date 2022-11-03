@@ -1,0 +1,23 @@
+#sortowanie przez wybieranie
+    
+def sortowanie(tab):        #tab - tablica wyjsciowa
+    sor_tab = []    #tablica z posortowanymi elementami, bedzie uzupelniana z tej wyjsciowej
+    num0 = len(tab)
+    while len(sor_tab)!=num0:
+        for el in tab:
+            if el == min(tab):
+                sor_tab.append(el)
+                tab.remove(el)
+                break
+    return sor_tab
+
+
+
+tablica = input().split()
+for i in range(len(tablica)):
+    tablica[i] = int(tablica[i])
+#for i in tablica:
+#    print(i)
+#dziala, sa inty
+tablica = sortowanie(tablica)
+print("posortowana tablica:", tablica)

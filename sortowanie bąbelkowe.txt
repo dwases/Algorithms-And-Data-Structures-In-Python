@@ -1,0 +1,18 @@
+#sortowanie babelkowe
+def sortowanie(tab):
+    n = len(tab)
+    while n > 1:
+        for i in range(n-1):
+            if tab[i]>tab[i+1]:
+                tab[i], tab[i+1] = tab[i+1], tab[i]
+        n-=1
+    return tab
+
+tablica = input().split()
+for i in range(len(tablica)):
+    tablica[i] = int(tablica[i])
+#for i in tablica:
+#    print(i)
+#dziala, sa inty
+tablica = sortowanie(tablica)
+print("posortowana tablica:", tablica)
